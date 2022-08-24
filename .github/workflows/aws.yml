@@ -28,5 +28,5 @@ jobs:
         REPOSITORY: mern
         IMAGE_TAG: ${{ github.sha }}
       run: |
-        docker build -t $REGISTRY/$REPOSITORY:$IMAGE_TAG . 
+        docker build . --file Dockerfile  --tag my-image-name:$(date +%s)
         docker push $REGISTRY/$REPOSITORY:$IMAGE_TAG
