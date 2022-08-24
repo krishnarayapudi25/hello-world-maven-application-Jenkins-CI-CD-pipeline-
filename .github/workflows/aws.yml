@@ -31,4 +31,4 @@ jobs:
         IMAGE_TAG: ${{ github.sha }}
       run: |
         docker build -t $REGISTRY/$REPOSITORY:$IMAGE_TAG .
-        docker push public.ecr.aws/k5h2l8q5/mern:latest
+        docker push $REGISTRY/$REPOSITORY:$IMAGE_TAG
